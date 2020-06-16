@@ -7,7 +7,10 @@ const port = 3000
 const Store = require('./api/models/store')
 
 
-
+app.use(function(req, res, next){
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
+})
 // mongodb://localhost:27017/google_map_api_store
 mongoose.connect(`mongodb+srv://sebauru87:${process.env.PASSWORD}@yelpcamp-ijcji.mongodb.net/stores?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
