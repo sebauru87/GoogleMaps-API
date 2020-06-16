@@ -38,7 +38,16 @@ app.post('/api/stores', (req, res)=>{
 
 })
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/api/stores', (req, res) => {
+    Store.find({}, (err, stores)=>{
+        if(err){
+            res.status(500).send(err);
+        } else {
+            res.status(200).send(stores);
+        }
+    })
+
+})
 
 app.delete('/api/stores', (req, res)=>{
     Store.deleteMany({}, (err)=>{
