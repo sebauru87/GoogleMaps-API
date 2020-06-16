@@ -1,0 +1,175 @@
+[{
+    "id": "163400",
+    "latitude": "-34.90545",
+    "longitude": "-56.186791",
+    "name": "18E - 18 Y EJIDO<br\/><small>18 de Julio 1353, <\/small>",
+    "services": ""
+}, {
+    "id": "163401",
+    "latitude": "-34.90297",
+    "longitude": "-56.178384",
+    "name": "18G - 18 Y GABOTO<br\/><small>18 de Julio 1752, <\/small>",
+    "services": ""
+}, {
+    "id": "163402",
+    "latitude": "-34.906159",
+    "longitude": "-56.193487",
+    "name": "18R - 18 Y RIO NEGRO<br\/><small>18 de Julio 1056, <\/small>",
+    "services": ""
+}, {
+    "id": "163403",
+    "latitude": "-34.919008",
+    "longitude": "-56.155956",
+    "name": "21E - 21 Y ELLAURI<br\/><small>21 de Setiembre 2852, <\/small>",
+    "services": ""
+}, {
+    "id": "163404",
+    "latitude": "-34.837103",
+    "longitude": "-56.016781",
+    "name": "AIC - AEROPUERTO INTERNACIONAL DE CARRASCO<br\/><small>RUTA 101 KM 19.950 n 104, <\/small>",
+    "services": ""
+}, {
+    "id": "163405",
+    "latitude": "-34.886552",
+    "longitude": "-56.058161",
+    "name": "ARO - AROCENA<br\/><small>Arocena 1680, <\/small>",
+    "services": ""
+}, {
+    "id": "163410",
+    "latitude": "-34.879292",
+    "longitude": "-56.148305",
+    "name": "JBO - JOS\u00c9 BATLLE Y ORDO\u00d1EZ<br\/><small>8 de Octubre 3395, <\/small>",
+    "services": ""
+}, {
+    "id": "163411",
+    "latitude": "-34.900804",
+    "longitude": "-56.164062",
+    "name": "LES - LA ESPA\u00d1OLA<br\/><small>Bvar. Artigas 1454, <\/small>",
+    "services": ""
+}, {
+    "id": "163413",
+    "latitude": "-34.903399",
+    "longitude": "-56.137307",
+    "name": "MSC - MONTEVIDEO SHOPPING<br\/><small>Luis A. de Herrera 1290, <\/small>",
+    "services": ""
+}, {
+    "id": "163415",
+    "latitude": "-34.880986",
+    "longitude": "-56.079579",
+    "name": "PDC - PORTONES DE CARRASCO<br\/><small>Avda. Italia 5781, <\/small>",
+    "services": ""
+}, {
+    "id": "163416",
+    "latitude": "-34.923554",
+    "longitude": "-56.159243",
+    "name": "PCE - PUNTA CARRETAS SHOPPING EXTERIOR<br\/><small>Ellauri 350, <\/small>",
+    "services": ""
+}, {
+    "id": "163421",
+    "latitude": "-34.90717",
+    "longitude": "-56.203593",
+    "name": "PMA - PLAZA MATRIZ<br\/><small>Sarand\u00ed 558, <\/small>",
+    "services": ""
+}, {
+    "id": "163422",
+    "latitude": "-34.858784",
+    "longitude": "-56.195953",
+    "name": "POS - POSADAS<br\/><small>Avda. Joaqu\u00edn Suarez 3774, <\/small>",
+    "services": ""
+}, {
+    "id": "163423",
+    "latitude": "-34.893839",
+    "longitude": "-56.166348",
+    "name": "TRC - TRES CRUCES<br\/><small>Bvar. Artigas 1825, <\/small>",
+    "services": ""
+}, {
+    "id": "163424",
+    "latitude": "-34.86829",
+    "longitude": "-56.170587",
+    "name": "NCE - NUEVO CENTRO EXTERIOR<br\/><small>Bvar. Artigas 3150, <\/small>",
+    "services": ""
+}, {
+    "id": "164023",
+    "latitude": "-34.868746",
+    "longitude": "-56.170134",
+    "name": "NC2 - NUEVO CENTRO PZA. COMIDAS<br\/><small>Avda. Luis A. de Herrera 3365, Plaza de Comidas, <\/small>",
+    "services": ""
+}, {
+    "id": "164024",
+    "latitude": "-34.916322",
+    "longitude": "-56.168833",
+    "name": "PRO- PARQUE ROD\u00d3<br\/><small>Jos\u00e9 Requena y Garcia S\/N entre Rambla Wilson y Avda. Sarmiento, <\/small>",
+    "services": ""
+}, {
+    "id": "164025",
+    "latitude": "-34.902679",
+    "longitude": "-56.136749",
+    "name": "MS2 - MONTEVIDEO SHOPPING PZA. COMIDAS<br\/><small>Luis A. de Herrera 1290, Plaza de Comidas, <\/small>",
+    "services": ""
+}, {
+    "id": "164026",
+    "latitude": "-34.923554",
+    "longitude": "-56.159243",
+    "name": "PCS - PUNTA CARRETAS SHOPPING PZA. COMIDAS<br\/><small>Ellauri 350, Plaza de Comidas, <\/small>",
+    "services": ""
+}, {
+    "id": "164027",
+    "latitude": "-34.880835",
+    "longitude": "-56.081449",
+    "name": "PC2 - PORTONES DE CARRASCO PZA. COMIDAS<br\/><small>Avda. Italia 5775, Plaza de Comidas, <\/small>",
+    "services": ""
+}, {
+    "id": "163412",
+    "latitude": "-34.909091",
+    "longitude": "-54.957532",
+    "name": "MDO - MALDONADO<br\/><small>25 de Mayo entre Sarandi y Roman Guerra, <\/small>",
+    "services": ""
+}, {
+    "id": "163409",
+    "latitude": "-34.961546",
+    "longitude": "-54.942676",
+    "name": "GOR - GORLERO (abierto de Diciembre a Pascuas)<br\/><small>Avda. Gorlero esq. Calle 27, <\/small>",
+    "services": ""
+}, {
+    "id": "163419",
+    "latitude": "-34.940982",
+    "longitude": "-54.933706",
+    "name": "PDE - PUNTA DEL ESTE<br\/><small>Roosevelt y El Pinar (p.7), <\/small>",
+    "services": ""
+}, {
+    "id": "163426",
+    "latitude": "-34.940982",
+    "longitude": "-54.933706",
+    "name": "PS2 - PUNTA SHOPPING PZA. COMIDAS<br\/><small>Roosevelt y El Pinar (p.7), Plaza de Comidas, <\/small>",
+    "services": ""
+}, {
+    "id": "163420",
+    "latitude": "-34.868823",
+    "longitude": "-55.275247",
+    "name": "PI2 - PIRI\u00c1POLIS (abierto de Diciembre a Pascuas)<br\/><small>Rambla de los Argentinos  esq. Atanasio Sierra, <\/small>",
+    "services": ""
+}, {
+    "id": "163406",
+    "latitude": "-34.772929",
+    "longitude": "-55.760404",
+    "name": "ATL - ATL\u00c1NTIDA (abierto de Diciembre a Pascuas)<br\/><small>Av. Artigas Esq. Montevideo, <\/small>",
+    "services": ""
+}, {
+    "id": "163408",
+    "latitude": "-34.866122",
+    "longitude": "-56.024746",
+    "name": "GNT - GEANT<br\/><small>Av. A la Playa y calle de 17 metros, <\/small>",
+    "services": ""
+}, {
+    "id": "163407",
+    "latitude": "-34.841157",
+    "longitude": "-55.99354",
+    "name": "CUS - COSTA URBANA SHOPPING<br\/><small>Ing. Luis Giannattasio S\/N Km 21, <\/small>",
+    "services": ""
+}, {
+    "id": "164022",
+    "latitude": "-34.725781",
+    "longitude": "-56.20369",
+    "name": "LPS- LAS PIEDRAS SHOPPING<br\/><small>Bvar. Del Centenario y Francisca Arnal de Artigas, <\/small>",
+    "services": ""
+}]
