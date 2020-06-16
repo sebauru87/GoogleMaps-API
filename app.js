@@ -17,18 +17,33 @@ mongoose.connect(`mongodb+srv://sebauru87:${process.env.PASSWORD}@yelpcamp-ijcji
 app.use(express.json({ limit: '50mb' }));
 
 app.post('/api/stores', (req, res)=>{
-    let dbStores = req.body;
+    let dbStores = [];
+    let stores = req.body;
 
-    console.log(dbStores);
-    // let store = new Store({
-    //     name: "La Pasiva Pocitos",
-    //     latitude: -34.9140478,
-    //     longitude: -56.1490158
-    // });
-    // store.save();
-    res.send('poooooosted');
+    stores.forEach((store)=>{
+        dbStores.push({
+            name: store.name,
+            latitude: store.latitude,
+            longitude: store.longitude
+        })
+    })
+
+    Store.create(dbStores, (err, stores)=>{
+        if(err){
+            res.status(500).send(err);
+        } else {
+            res.status(200).send(stores);
+        }
+    })
+
 })
 
 app.get('/', (req, res) => res.send('Hello World!'))
+
+app.delete('/api/stores', (req, res)=>{
+    Store.deleteMany({}, (err)=>{
+        res.status(200).send(err);
+    })
+})
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
