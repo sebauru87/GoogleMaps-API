@@ -5,9 +5,10 @@ const mongoose = require('mongoose')
 const app = express()
 const port = 3000
 const Store = require('./api/models/store')
+const axios = require('axios')
 
 
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     next();
 })
@@ -17,13 +18,15 @@ mongoose.connect(`mongodb+srv://sebauru87:${process.env.PASSWORD}@yelpcamp-ijcji
     useUnifiedTopology: true
 });
 
-app.use(express.json({ limit: '50mb' }));
+app.use(express.json({
+    limit: '50mb'
+}));
 
-app.post('/api/stores', (req, res)=>{
+app.post('/api/stores', (req, res) => {
     let dbStores = [];
     let stores = req.body;
 
-    stores.forEach((store)=>{
+    stores.forEach((store) => {
         dbStores.push({
             name: store.name,
             latitude: store.latitude,
@@ -31,8 +34,8 @@ app.post('/api/stores', (req, res)=>{
         })
     })
 
-    Store.create(dbStores, (err, stores)=>{
-        if(err){
+    Store.create(dbStores, (err, stores) => {
+        if (err) {
             res.status(500).send(err);
         } else {
             res.status(200).send(stores);
@@ -42,8 +45,22 @@ app.post('/api/stores', (req, res)=>{
 })
 
 app.get('/api/stores', (req, res) => {
-    Store.find({}, (err, stores)=>{
-        if(err){
+
+    const zipCode = req.query.zip_code;
+    const googleURL = "https://maps.googleapis.com/maps/api/geocode/json";
+    axios.get(googleURL, {
+        params: {
+            address: zipCode+'montevideo'+'uruguay',
+            key: process.env.API_KEY_SERVER
+        }
+    }).then((response) => {
+        console.log(response.data);
+    }).catch((error) => {
+        console.log(error);
+    })
+
+    Store.find({}, (err, stores) => {
+        if (err) {
             res.status(500).send(err);
         } else {
             res.status(200).send(stores);
@@ -52,8 +69,8 @@ app.get('/api/stores', (req, res) => {
 
 })
 
-app.delete('/api/stores', (req, res)=>{
-    Store.deleteMany({}, (err)=>{
+app.delete('/api/stores', (req, res) => {
+    Store.deleteMany({}, (err) => {
         res.status(200).send(err);
     })
 })
