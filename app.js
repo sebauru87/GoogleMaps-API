@@ -15,7 +15,8 @@ app.use(function (req, res, next) {
 // mongodb://localhost:27017/google_map_api_store
 mongoose.connect(`mongodb+srv://sebauru87:${process.env.PASSWORD}@yelpcamp-ijcji.mongodb.net/stores?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 });
 
 app.use(express.json({
@@ -29,8 +30,13 @@ app.post('/api/stores', (req, res) => {
     stores.forEach((store) => {
         dbStores.push({
             name: store.name,
-            latitude: store.latitude,
-            longitude: store.longitude
+            location: {
+                type: 'Point',
+                coordinates: [
+                    store.longitude,
+                    store.latitude
+                ]
+            }
         })
     })
 
@@ -59,19 +65,31 @@ app.get('/api/stores', (req, res) => {
             data.results[0].geometry.location.lng,
             data.results[0].geometry.location.lat
         ]
+
+        Store.find({
+            location: {
+                $near: {
+                    $maxDistance: 3000,
+                    $geometry: {
+                        type: "Point",
+                        coordinates: coordinates
+                    }
+                }
+            }
+        }, (err, stores)=>{
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.status(200).send(stores);
+            }
+        })
+
         console.log(response.data);
         console.log(coordinates);
     }).catch((error) => {
         console.log(error);
     })
 
-    Store.find({}, (err, stores) => {
-        if (err) {
-            res.status(500).send(err);
-        } else {
-            res.status(200).send(stores);
-        }
-    })
 
 })
 
