@@ -54,7 +54,13 @@ app.get('/api/stores', (req, res) => {
             key: process.env.API_KEY_SERVER
         }
     }).then((response) => {
+        const data = response.data;
+        const coordinates = [
+            data.results[0].geometry.location.lng,
+            data.results[0].geometry.location.lat
+        ]
         console.log(response.data);
+        console.log(coordinates);
     }).catch((error) => {
         console.log(error);
     })
