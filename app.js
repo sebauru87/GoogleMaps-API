@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 const app = express();
-const port = 3000;
 const Store = require('./api/models/store');
 const axios = require('axios');
 const GoogleMapsService = require('./api/services/googleMapsService');
@@ -15,10 +14,14 @@ app.use(function (req, res, next) {
     next();
 })
 // mongodb://localhost:27017/google_map_api_store
-mongoose.connect(`mongodb+srv://sebauru87:${process.env.PASSWORD}@yelpcamp-ijcji.mongodb.net/stores?retryWrites=true&w=majority`, {
+mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('ERROR:', err.message);
 });
 
 app.use(express.json({
@@ -90,4 +93,4 @@ app.delete('/api/stores', (req, res) => {
     })
 })
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(process.env.PORT || 3000, () => console.log(`app server started`))
